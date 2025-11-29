@@ -3,3 +3,7 @@
 
 [localhost]
 localhost
+
+[localhost:vars]
+PERSON="Mahesh"
+WISHES="Good Morning"

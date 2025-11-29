@@ -1,0 +1,6 @@
+- name: variable Inventory
+  hosts: localhost 
+  tasks: 
+    - name: Print variables
+      ansible.builtin.debug:
+        msg: "Hello {{ PERSON }}, {{ WISHES }}! Have a nice day!"
