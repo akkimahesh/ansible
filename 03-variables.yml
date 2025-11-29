@@ -5,5 +5,7 @@
     WISHES: "Good Morning"
   tasks: 
     - name: Print variables
+      PERSON: "Mahesh varma"
+      WISHES: "Good Evening"
       ansible.builtin.debug:
         msg: "Hello {{ PERSON }}, {{ WISHES }}! Have a nice day!"
