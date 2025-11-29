@@ -1,0 +1,13 @@
+- name: type1 variable
+  hosts: localhost 
+  vars_files:
+    - variables.yaml
+    # PERSON: "Mahesh"
+    # WISHES: "Good Morning"
+  tasks: 
+    - name: Print variables
+      vars:
+        # PERSON: "Mahesh varma"
+        # WISHES: "Good Evening"
+      ansible.builtin.debug:
+        msg: "Hello {{ PERSON }}, {{ WISHES }}! Have a nice day!"
