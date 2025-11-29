@@ -1,0 +1,2 @@
+PERSON: "AKKI MAHESH"
+WISHES: "Good Afternoon"
