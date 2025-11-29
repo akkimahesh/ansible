@@ -1,0 +1,10 @@
+#playbook is collection of tasks
+- name: play1 and play2
+  hosts: localhost
+  tasks:
+  - name: print the play1
+    ansible.builtin.debug:
+    msg: "this is play1"
+  - name: print the play2
+    ansible.builtin.debug:
+    msg: "this is play2"
