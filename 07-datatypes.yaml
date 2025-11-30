@@ -1,0 +1,15 @@
+- name: Example Task
+  hosts: localhost
+  vars:
+    Name: Mahesh
+    skills:
+      - Linux
+      - AWS
+      - DevOps
+    certifications:
+      SQL: "linkedin Certified"
+      Azure: "Microsoft Certified"
+  tasks:
+    - name: Print complex data types
+      ansible.builtin.debug:
+        msg: "Hello, My Name is {{ Name }}. Skills: {{ skills }}, Certifications: {{ certifications }}"
