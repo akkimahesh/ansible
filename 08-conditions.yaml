@@ -10,3 +10,8 @@
   - name: print user info
     ansible.builtin.debug:
      msg: "user info: {{ user }}"
+
+  - name: create Mahesh user if not exists
+    ansible.builtin.user:
+      name: Mahesh
+    when: user.rc != 0
