@@ -1,0 +1,8 @@
+- name: Loop Example
+  hosts: localhost
+  become: yes
+  tasks:
+   - name: check user existence
+     ansible.builtin.command: id Mahesh
+     reference: check_user
+     ignore_errors: yes
