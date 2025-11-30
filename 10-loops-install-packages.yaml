@@ -1,0 +1,26 @@
+- name: Loop Example
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: print loop 
+    ansible.builtin.package:
+      name: {{ item }}
+      state: present
+    loop:
+      - git
+      - mysql
+      - nginx
+  - name: start package 
+    ansible.builtin.service:
+      name: "{{ item }}"
+      state: started
+    loop:
+      - mysql
+      - nginx
+  - name: print installed packages
+    ansible.builtin.debug:
+     msg: "Installed package: {{ item }}"
+    loop:
+      - git
+      - mysql
+      - nginx
