@@ -9,7 +9,11 @@
     certifications:
       SQL: "linkedin Certified"
       Azure: "Microsoft Certified"
+    Fresher: true
   tasks:
     - name: Print complex data types
       ansible.builtin.debug:
         msg: "Hello, My Name is {{ Name }}. Skills: {{ skills }}, Certifications: {{ certifications }}"
+    - name: Print complex data types
+      ansible.builtin.debug:
+        msg: "Is he a Fresher? {{ Fresher }}"
