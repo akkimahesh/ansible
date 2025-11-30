@@ -13,7 +13,7 @@
   - name: start package 
     ansible.builtin.service:
       name: "{{item}}"
-      state: started
+      state: stopped
     loop:
       - nginx
   - name: print installed packages
